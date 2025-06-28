@@ -1,6 +1,5 @@
 import React from 'react';
 import Label from './Label';
-import { LabelProps } from './Label.types';
 
 export default {
   title: 'Components/Label',
@@ -12,16 +11,16 @@ export default {
   },
 };
 
-const Template = (args: LabelProps) => <Label {...args} />;
+const Template = (args: any) => <Label {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   children: 'Label text',
   disabled: false,
   color: '#222',
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   children: 'Disabled label',
   disabled: true,

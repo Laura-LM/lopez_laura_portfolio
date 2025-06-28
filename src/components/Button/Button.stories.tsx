@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from './Button';
-import { ButtonProps } from './Button.types';
 
 export default {
   title: 'Components/Button',
@@ -11,15 +10,15 @@ export default {
   },
 };
 
-const Template = (args: ButtonProps) => <Button {...args} />;
+const Template = (args: any) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   children: 'Click Me',
   disabled: false,
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   children: 'Disabled',
   disabled: true,

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ButtonProps } from './Button.types.js';
 
 const StyledButton = styled.button<{ disabled?: boolean }>`
   padding: 12px 24px;
@@ -15,12 +16,6 @@ const StyledButton = styled.button<{ disabled?: boolean }>`
     font-size: 0.9rem;
   }
 `;
-
-interface ButtonProps {
-  onClick?: () => void;
-  disabled?: boolean;
-  children: React.ReactNode;
-}
 
 const Button: React.FC<ButtonProps> = ({ onClick, disabled, children }) => {
   return (

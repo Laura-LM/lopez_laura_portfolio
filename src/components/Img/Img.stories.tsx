@@ -1,6 +1,5 @@
 import React from 'react';
 import Img from './Img';
-import { ImgProps } from './Img.types';
 
 export default {
   title: 'Components/Img',
@@ -14,9 +13,9 @@ export default {
   },
 };
 
-const Template = (args: ImgProps) => <Img {...args} />;
+const Template = (args: any) => <Img {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   src: 'https://via.placeholder.com/300x200',
   alt: 'Placeholder image',
@@ -25,7 +24,7 @@ Default.args = {
   disabled: false,
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   ...Default.args,
   disabled: true,

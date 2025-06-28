@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RadioButtonProps } from './RadioButton.types';
+import { RadioButtonProps } from './RadioButton.types.js';
 
 const Wrapper = styled.label<{ disabled?: boolean }>`
   display: flex;

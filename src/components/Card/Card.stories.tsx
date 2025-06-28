@@ -12,16 +12,16 @@ export default {
   },
 };
 
-const Template = (args: CardProps) => <Card {...args} />;
+const Template = (args: any) => <Card {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   children: 'This is a card!',
   disabled: false,
   backgroundColor: '#fff',
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   children: 'This card is disabled.',
   disabled: true,

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LabelProps } from './Label.types';
+import { LabelProps } from './Label.types.js';
 
 const StyledLabel = styled.label<{ disabled?: boolean; color?: string }>`
   color: ${({ disabled, color }) => (disabled ? '#a0a0a0' : color || '#222')};

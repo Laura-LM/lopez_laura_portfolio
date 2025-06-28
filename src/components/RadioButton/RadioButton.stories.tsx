@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import RadioButton from './RadioButton';
-import { RadioButtonProps } from './RadioButton.types';
 
 export default {
   title: 'Components/RadioButton',
@@ -12,7 +11,7 @@ export default {
   },
 };
 
-const Template = (args: RadioButtonProps) => {
+const Template = (args: any) => {
   const [checked, setChecked] = useState(args.checked || false);
   return (
     <RadioButton
@@ -23,14 +22,14 @@ const Template = (args: RadioButtonProps) => {
   );
 };
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   label: 'Radio Button',
   checked: false,
   disabled: false,
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   label: 'Disabled Radio',
   checked: false,

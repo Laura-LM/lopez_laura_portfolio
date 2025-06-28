@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CardProps } from './Card.types';
+import { CardProps } from './Card.types.js';
 
 const StyledCard = styled.div<{ disabled?: boolean; backgroundColor?: string }>`
   background-color: ${({ disabled, backgroundColor }) =>

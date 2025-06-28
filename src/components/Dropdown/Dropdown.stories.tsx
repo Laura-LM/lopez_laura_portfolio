@@ -17,7 +17,7 @@ const options = [
   { label: 'Option 3', value: '3' },
 ];
 
-const Template = (args: DropdownProps) => {
+const Template = (args: any) => {
   const [selected, setSelected] = useState(args.value || options[0].value);
   return (
     <Dropdown
@@ -29,14 +29,14 @@ const Template = (args: DropdownProps) => {
   );
 };
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   value: '1',
   disabled: false,
   options,
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   value: '1',
   disabled: true,

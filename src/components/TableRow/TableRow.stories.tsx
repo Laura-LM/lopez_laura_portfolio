@@ -1,31 +1,33 @@
 import React from 'react';
-import Text from './Text';
+import TableRow from './TableRow';
 
 export default {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Components/TableRow',
+  component: TableRow,
   argTypes: {
     disabled: { control: 'boolean' },
-    color: { control: 'color' },
-    size: { control: 'text' },
     children: { control: 'text' },
   },
 };
 
-const Template = (args: any) => <Text {...args} />;
+const Template = (args: any) => (
+  <table>
+    <tbody>
+      <TableRow {...args}>
+        <td>Cell 1</td>
+        <td>Cell 2</td>
+        <td>Cell 3</td>
+      </TableRow>
+    </tbody>
+  </table>
+);
 
 export const Default = Template.bind({}) as any;
 Default.args = {
-  children: 'Sample text',
   disabled: false,
-  color: '#222',
-  size: '1rem',
 };
 
 export const Disabled = Template.bind({}) as any;
 Disabled.args = {
-  children: 'Disabled text',
   disabled: true,
-  color: '#222',
-  size: '1rem',
 };

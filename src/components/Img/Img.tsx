@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ImgProps } from './Img.types';
+import { ImgProps } from './Img.types.js';
 
 const StyledImg = styled.img<{ disabled?: boolean }>`
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};

@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroImage from './HeroImage';
-import { HeroImageProps } from './HeroImage.types';
 
 export default {
   title: 'Components/HeroImage',
@@ -14,9 +13,9 @@ export default {
   },
 };
 
-const Template = (args: HeroImageProps) => <HeroImage {...args} />;
+const Template = (args: any) => <HeroImage {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({}) as any;
 Default.args = {
   src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
   alt: 'Nature',
@@ -25,7 +24,7 @@ Default.args = {
   children: 'Hero Text',
 };
 
-export const Disabled = Template.bind({});
+export const Disabled = Template.bind({}) as any;
 Disabled.args = {
   ...Default.args,
   disabled: true,
