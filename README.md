@@ -72,17 +72,6 @@ Visit [http://localhost:6006] in your browser to view the component library.
 ---
 
 
-# Testing
-
-To run tests locally (optional, outside Docker):
-
-```sh
-npm install
-npm test
-```
-
----
-
 # Notes
 
 - All components have a default and a disabled state.  
