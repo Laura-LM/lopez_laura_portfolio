@@ -1,74 +1,55 @@
-# Laura Lopez UI Component Library
-
 This project is a reusable React component library built with Create React App and Storybook. 
 All components are styled with Styled Components, fully responsive, and include Storybook controls for easy property editing.
 
 ---
 
-## 🚀 Features
+# Getting Started
 
-- **Component Library**: Button, Label, Text, Table (with Header, Row, Cell, Footer), Dropdown, Radio Button, Img, Hero Image, Card.
-- **Styled Components**: All components use styled-components for styling.
-- **Responsiveness**: Components are responsive and adapt to different screen sizes.
-- **Storybook**: Visual documentation with controls for text, color, and disabled state.
-- **Testing**: Each component has at least two tests (visibility and disabled state color).
-- **Dockerized**: Easily run the Storybook site in a container on port 8083.
+# Option 1: Running with Docker (Recommended)
 
----
+# Prerequisites
 
-## 🧑‍💻 Getting Started
+- Docker installed on your machine.
 
-### Option 1: Running with Docker (Recommended)
-
-#### Prerequisites
-
-- [Docker](https://www.docker.com/) installed on your machine.
-
-#### Clone the repository
+# Clone the repository
 
 ```sh
 git clone <REPO_URL>
 cd lopez_laura_ui_garden
 ```
 
-#### Build the Docker image
+# Build the Docker image
 
 ```sh
 docker build -t laura_lopez_coding_assignment12 .
 ```
 
-#### Run the Docker container
+# Run the Docker container
 
-**Option A: Run with logs visible (recommended)**
+
 ```sh
 docker run --rm -p 8083:8083 --name laura_lopez_coding_assignment12 laura_lopez_coding_assignment12
 ```
 
-**Option B: Run in background**
-```sh
-docker run --rm -d -p 8083:8083 --name laura_lopez_coding_assignment12 laura_lopez_coding_assignment12
-```
-
 **Note:** The container will show nginx logs and appear to "hang" - this is normal! It's running successfully.
 
-#### Open Storybook
+# Open Storybook
 
-Visit [http://localhost:8083](http://localhost:8083) in your browser to view the component library.
+Visit [http://localhost:8083] in your browser to view the component library.
 
-#### Stop the container
+# Stop the container
 
-- **If using Option A:** Press `Ctrl+C` in the terminal
-- **If using Option B:** Run `docker stop laura_lopez_coding_assignment12`
-
+**Press `Ctrl+C` in the terminal**
 
 
-### Option 2: Running Locally (Development)
 
-#### Prerequisites
+# Option 2: Running Locally (Development)
 
-- [Node.js](https://nodejs.org/) (version 18 or higher)
+# Prerequisites
 
-#### Clone and setup
+-Node.js (version 18 or higher)
+
+## Clone and setup
 
 ```sh
 git clone <REPO_URL>
@@ -76,20 +57,20 @@ cd lopez_laura_ui_garden
 npm install
 ```
 
-#### Run Storybook in development mode
+# Run Storybook in development mode
 
 ```sh
 npm run storybook
 ```
 
-#### Open Storybook
+# Open Storybook
 
-Visit [http://localhost:6006](http://localhost:6006) in your browser to view the component library.
+Visit [http://localhost:6006] in your browser to view the component library.
 
 ---
 
 
-## 🧪 Testing
+# Testing
 
 To run tests locally (optional, outside Docker):
 
@@ -100,7 +81,7 @@ npm test
 
 ---
 
-## 📝 Notes
+# Notes
 
 - All components have a default and a disabled state.  
 - Disabled state is visually indicated (greyed out, not-allowed cursor).
@@ -109,17 +90,9 @@ npm test
 
 ---
 
-## 📦 Container Details
+## Container Details
 
 - **Image name:** `laura_lopez_coding_assignment12`
 - **Container name:** `laura_lopez_coding_assignment12`
 - **Working directory:** `/laura_lopez_ui_garden`
 - **Port:** `8083`
-
----
-
-## 👩‍💻 Author
-
-Laura Lopez
-
----
