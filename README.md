@@ -1,3 +1,5 @@
+# React component library
+
 This project is a reusable React component library built with Create React App and Storybook. 
 All components are styled with Styled Components, fully responsive, and include Storybook controls for easy property editing.
 
