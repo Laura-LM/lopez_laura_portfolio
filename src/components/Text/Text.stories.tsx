@@ -1,6 +1,6 @@
 import React from 'react';
 import Text from './Text';
-import { TextProps } from './Test.types';
+import { TextProps } from './Text.types';
 
 export default {
   title: 'Components/Text',

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { TextProps } from './Test.types';
+import { TextProps } from './Text.types';
 
 const StyledText = styled.span<{ disabled?: boolean; color?: string; size?: string | number }>`
   color: ${({ disabled, color }) => (disabled ? '#a0a0a0' : color || '#222')};
