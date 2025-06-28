@@ -1,6 +1,6 @@
 FROM node:20 AS build
 
-WORKDIR /lopez_laura_ui_garden
+WORKDIR /laura_lopez_ui_garden
 
 COPY package*.json ./
 RUN npm install
@@ -10,9 +10,9 @@ RUN npm run build-storybook
 
 FROM nginx:alpine
 
-WORKDIR /lopez_laura_ui_garden
+WORKDIR /laura_lopez_ui_garden
 
-COPY --from=build /lopez_laura_ui_garden/storybook-static /usr/share/nginx/html
+COPY --from=build /laura_lopez_ui_garden/storybook-static /usr/share/nginx/html
 
 RUN sed -i 's/80;/8083;/' /etc/nginx/conf.d/default.conf
 

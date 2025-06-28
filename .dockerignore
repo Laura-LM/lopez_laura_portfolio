@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+dist
+storybook-static
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+*.md

@@ -18,32 +18,58 @@ All components are styled with Styled Components, fully responsive, and include 
 
 ## 🧑‍💻 Getting Started
 
-### Prerequisites
+### Option 1: Running with Docker (Recommended)
+
+#### Prerequisites
 
 - [Docker](https://www.docker.com/) installed on your machine.
 
-### Clone the repository
+#### Clone the repository
 
 ```sh
 git clone <REPO_URL>
 cd lopez_laura_ui_garden
 ```
 
-### Build the Docker image
+#### Build the Docker image
 
 ```sh
-docker build -t lopez_laura_coding_assignment12 .
+docker build -t laura_lopez_coding_assignment12 .
 ```
 
-### Run the Docker container
+#### Run the Docker container
 
 ```sh
-docker run --rm -p 8083:8083 --name lopez_laura_coding_assignment12 lopez_laura_coding_assignment12
+docker run --rm -p 8083:8083 --name laura_lopez_coding_assignment12 laura_lopez_coding_assignment12
 ```
 
-### Open Storybook
+#### Open Storybook
 
 Visit [http://localhost:8083](http://localhost:8083) in your browser to view the component library.
+
+### Option 2: Running Locally (Development)
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/) (version 18 or higher)
+
+#### Clone and setup
+
+```sh
+git clone <REPO_URL>
+cd lopez_laura_ui_garden
+npm install
+```
+
+#### Run Storybook in development mode
+
+```sh
+npm run storybook
+```
+
+#### Open Storybook
+
+Visit [http://localhost:6006](http://localhost:6006) in your browser to view the component library.
 
 ---
 
@@ -70,9 +96,9 @@ npm test
 
 ## 📦 Container Details
 
-- **Image name:** `lopez_laura_coding_assignment12`
-- **Container name:** `lopez_laura_coding_assignment12`
-- **Working directory:** `/lopez_laura_ui_garden`
+- **Image name:** `laura_lopez_coding_assignment12`
+- **Container name:** `laura_lopez_coding_assignment12`
+- **Working directory:** `/laura_lopez_ui_garden`
 - **Port:** `8083`
 
 ---
