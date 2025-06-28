@@ -39,13 +39,28 @@ docker build -t laura_lopez_coding_assignment12 .
 
 #### Run the Docker container
 
+**Option A: Run with logs visible (recommended)**
 ```sh
 docker run --rm -p 8083:8083 --name laura_lopez_coding_assignment12 laura_lopez_coding_assignment12
 ```
 
+**Option B: Run in background**
+```sh
+docker run --rm -d -p 8083:8083 --name laura_lopez_coding_assignment12 laura_lopez_coding_assignment12
+```
+
+**Note:** The container will show nginx logs and appear to "hang" - this is normal! It's running successfully.
+
 #### Open Storybook
 
 Visit [http://localhost:8083](http://localhost:8083) in your browser to view the component library.
+
+#### Stop the container
+
+- **If using Option A:** Press `Ctrl+C` in the terminal
+- **If using Option B:** Run `docker stop laura_lopez_coding_assignment12`
+
+
 
 ### Option 2: Running Locally (Development)
 
