@@ -43,44 +43,6 @@ Visit [http://localhost:8083] in your browser to view the component library.
 
 **Press `Ctrl+C` in the terminal**
 
-
-
-# Option 2: Running Locally (Development)
-
-# Prerequisites
-
--Node.js (version 18 or higher)
-
-## Clone and setup
-
-```sh
-git clone <REPO_URL>
-cd lopez_laura_ui_garden
-npm install
-```
-
-# Run Storybook in development mode
-
-```sh
-npm run storybook
-```
-
-# Open Storybook
-
-Visit [http://localhost:6006] in your browser to view the component library.
-
----
-
-
-# Notes
-
-- All components have a default and a disabled state.  
-- Disabled state is visually indicated (greyed out, not-allowed cursor).
-- Storybook controls allow you to change text, background color, and other props live.
-- The Docker container serves the production Storybook build on port 8083 as required.
-
----
-
 ## Container Details
 
 - **Image name:** `laura_lopez_coding_assignment12`
