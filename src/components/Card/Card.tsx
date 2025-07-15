@@ -17,7 +17,7 @@ const StyledCard = styled.div<{ disabled?: boolean; backgroundColor?: string }>`
 `;
 
 const Card: React.FC<CardProps> = ({ children, disabled, backgroundColor }) => (
-  <StyledCard disabled={disabled} backgroundColor={backgroundColor}>
+  <StyledCard disabled={disabled} backgroundColor={backgroundColor} data-testid="card">
     {children}
   </StyledCard>
 );
