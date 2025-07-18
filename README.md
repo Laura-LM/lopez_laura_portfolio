@@ -50,10 +50,3 @@ Visit [http://localhost:8018] in your browser to view the component library.
 # Stop the container
 
 **Press `Ctrl+C` in the terminal**
-
-## Container Details
-
-- **Image name:** `laura_lopez_coding_assignment12`
-- **Container name:** `laura_lopez_coding_assignment12`
-- **Working directory:** `/laura_lopez_ui_garden`
-- **Port:** `8083`
