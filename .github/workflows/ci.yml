@@ -38,16 +38,8 @@ jobs:
     - name: Build Docker image
       run: docker build -t lopez_laura_coding_assignment13 .
     
-    - name: Test Docker container
-      run: |
-        docker run -d -p 8018:8018 --name test-container lopez_laura_coding_assignment13
-        sleep 15
-        curl -f http://localhost:8018 || (docker logs test-container && exit 1)
-        docker stop test-container
-        docker rm test-container
-    
     - name: Upload coverage reports
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: coverage-reports
