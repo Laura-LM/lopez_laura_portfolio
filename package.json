@@ -14,7 +14,12 @@
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}",
     "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx,json,css,md}",
     "test": "jest --passWithNoTests",
-    "test:ci": "jest --coverage --ci --silent --watchAll=false --passWithNoTests"
+    "test:ci": "jest --coverage --ci --silent --watchAll=false --passWithNoTests",
+    
+    "setup": "npm install && npm run format && echo 'Setup complete! Now run: docker build -t lopez_laura_coding_assignment13 .'",
+    "docker:build": "docker build -t lopez_laura_coding_assignment13 .",
+    "docker:run": "docker run -p 8018:8018 lopez_laura_coding_assignment13",
+    "docker:setup": "npm run setup && npm run docker:build && echo 'Ready to run: npm run docker:run'"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx}": [
