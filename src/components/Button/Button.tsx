@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ButtonProps } from './Button.types';
+import { ButtonProps } from './Button.types.js';
 
 const StyledButton = styled.button<{ disabled?: boolean }>`
   padding: 12px 24px;
