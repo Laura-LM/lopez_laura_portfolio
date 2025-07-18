@@ -9,11 +9,9 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Auto-format code before checks (this ensures it always passes)
-RUN npm run format
-
 # Run quality checks
 RUN npm run lint
+RUN npm run format:check
 RUN npm run test:ci
 
 # Build Storybook
@@ -22,14 +20,14 @@ RUN npm run build-storybook
 # Production stage
 FROM nginx:alpine
 
-# Copy built files to nginx
+WORKDIR /lopez_laura_ui_garden_build_checks
+
+# Copy built storybook
 COPY --from=build /lopez_laura_ui_garden_build_checks/storybook-static /usr/share/nginx/html
 
-# Copy nginx config
-COPY nginx.conf /etc/nginx/nginx.conf
+# Configure nginx port
+RUN sed -i 's/80;/8018;/' /etc/nginx/conf.d/default.conf
 
-# Expose port
 EXPOSE 8018
 
-# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
