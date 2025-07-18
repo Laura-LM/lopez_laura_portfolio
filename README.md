@@ -68,10 +68,10 @@ npm run build-storybook     # Build Storybook for production
 
 ### **Pre-commit Hooks (Husky)**
 Automatically runs before every commit:
-- ✅ **ESLint** - Code linting
-- ✅ **Prettier** - Code formatting  
-- ✅ **Jest Tests** - Unit tests
-- ✅ **Type checking** - TypeScript validation
+- **ESLint** - Code linting
+- **Prettier** - Code formatting  
+- **Jest Tests** - Unit tests
+- **Type checking** - TypeScript validation
 
 **If any check fails, the commit is blocked.**
 
@@ -160,24 +160,11 @@ npm test -- --coverage     # Generate coverage report
 10. **Failure Notifications**
 
 
-## **Quality Gates**
-
-### **Pre-commit (Local)**
-- Blocks commits with failing checks
-- Runs ESLint, Prettier, and Tests
-- Provides immediate feedback
-
 ### **GitHub Actions (Remote)**
 - Runs on every push
 - Same checks as pre-commit
 - Blocks merges if checks fail
 - Sends notifications on failure
-
-### **Docker Build**
-- Includes quality checks in build process
-- Ensures production readiness
-- Verifies deployment viability
-
 
 
 ## **Contributing**
