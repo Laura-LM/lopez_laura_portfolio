@@ -35,7 +35,7 @@ export default [
   {
     files: ['**/*.stories.tsx', '**/*.stories.ts'],
     rules: {
-      '@typescript-eslint/no-unused-vars': 'off', // Menos estricto en stories
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   {

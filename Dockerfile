@@ -9,7 +9,7 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Run quality checks - estos fallarán si el código no cumple los estándares
+# Run quality checks
 RUN npm run lint
 RUN npm run format:check
 RUN npm run test:ci
