@@ -167,17 +167,6 @@ npm test -- --coverage     # Generate coverage report
 - Sends notifications on failure
 
 
-## **Contributing**
-
-1. Clone the repository
-2. Install dependencies: `npm install`
-3. Make your changes
-4. Run quality checks: `npm run lint && npm run test:ci`
-5. Commit changes (pre-commit hooks will run automatically)
-6. Push to GitHub (CI/CD pipeline will run)
-
----
-
 ## **Troubleshooting**
 
 ### **Common Issues**
