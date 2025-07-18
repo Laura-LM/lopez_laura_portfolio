@@ -7,8 +7,24 @@
     "rollup": "rollup -c",
     "build": "npm run build:types && npm run rollup",
     "storybook": "storybook dev -p 6006",
-    "test": "jest",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,md}",
+    "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx,json,css,md}",
+    "test": "jest --passWithNoTests",
+    "test:ci": "jest --coverage --ci --silent --watchAll=false"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "jest --findRelatedTests --ci --silent --watchAll=false"
+    ],
+    "src/**/*.{json,css,md}": [
+      "prettier --write"
+    ]
   },
   "author": "Laura Lopez",
   "license": "ISC",

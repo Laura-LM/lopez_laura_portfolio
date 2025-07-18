@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Dropdown from './Dropdown';
-import { DropdownProps } from './Dropdown.types';
+// import { DropdownProps } from './Dropdown.types';
 
 export default {
   title: 'Components/Dropdown',

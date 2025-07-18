@@ -13,13 +13,7 @@ export default {
 
 const Template = (args: any) => {
   const [checked, setChecked] = useState(args.checked || false);
-  return (
-    <RadioButton
-      {...args}
-      checked={checked}
-      onChange={setChecked}
-    />
-  );
+  return <RadioButton {...args} checked={checked} onChange={setChecked} />;
 };
 
 export const Default = Template.bind({}) as any;

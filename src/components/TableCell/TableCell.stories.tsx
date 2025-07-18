@@ -25,7 +25,9 @@ const HeaderTemplate = (args: any) => (
   <table>
     <thead>
       <tr>
-        <TableCell {...args} asHeader>Header Content</TableCell>
+        <TableCell {...args} asHeader>
+          Header Content
+        </TableCell>
       </tr>
     </thead>
   </table>

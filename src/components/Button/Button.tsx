@@ -26,3 +26,4 @@ const Button: React.FC<ButtonProps> = ({ onClick, disabled, children }) => {
 };
 
 export default Button;
+// Test pre-commit hook

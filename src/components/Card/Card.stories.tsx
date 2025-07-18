@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import { CardProps } from './Card.types';
 
 export default {
   title: 'Components/Card',

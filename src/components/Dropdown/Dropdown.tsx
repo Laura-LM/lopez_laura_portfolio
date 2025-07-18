@@ -13,14 +13,19 @@ const StyledSelect = styled.select<{ disabled?: boolean }>`
   transition: background-color 0.3s;
 `;
 
-const Dropdown: React.FC<DropdownProps> = ({ options, value, onChange, disabled }) => (
+const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  value,
+  onChange,
+  disabled,
+}) => (
   <StyledSelect
     value={value}
-    onChange={e => onChange && onChange(e.target.value)}
+    onChange={(e) => onChange && onChange(e.target.value)}
     disabled={disabled}
     data-testid="dropdown"
   >
-    {options.map(opt => (
+    {options.map((opt) => (
       <option key={opt.value} value={opt.value}>
         {opt.label}
       </option>

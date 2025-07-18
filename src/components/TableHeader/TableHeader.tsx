@@ -6,7 +6,7 @@ const StyledThead = styled.thead<{ disabled?: boolean }>`
   opacity: ${({ disabled }) => (disabled ? 0.6 : 1)};
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'auto')};
   background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : '#fafafa')};
-  
+
   @media (max-width: 600px) {
     font-size: 0.9rem;
   }

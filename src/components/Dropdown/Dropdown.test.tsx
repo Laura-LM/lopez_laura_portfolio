@@ -14,5 +14,7 @@ test('Dropdown is visible', () => {
 
 test('Dropdown has grey background when disabled', () => {
   render(<Dropdown options={options} value="1" disabled />);
-  expect(screen.getByTestId('dropdown')).toHaveStyle('background-color: #d3d3d3');
+  expect(screen.getByTestId('dropdown')).toHaveStyle(
+    'background-color: #d3d3d3'
+  );
 });

@@ -8,7 +8,7 @@ const StyledTfoot = styled.tfoot<{ disabled?: boolean }>`
   background-color: ${({ disabled }) => (disabled ? '#f5f5f5' : '#f8f8f8')};
   border-top: 2px solid #ddd;
   font-weight: 500;
-  
+
   @media (max-width: 600px) {
     font-size: 0.9rem;
   }

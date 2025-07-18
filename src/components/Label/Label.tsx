@@ -10,8 +10,18 @@ const StyledLabel = styled.label<{ disabled?: boolean; color?: string }>`
   transition: color 0.3s;
 `;
 
-const Label: React.FC<LabelProps> = ({ children, htmlFor, disabled, color }) => (
-  <StyledLabel htmlFor={htmlFor} disabled={disabled} color={color} data-testid="label">
+const Label: React.FC<LabelProps> = ({
+  children,
+  htmlFor,
+  disabled,
+  color,
+}) => (
+  <StyledLabel
+    htmlFor={htmlFor}
+    disabled={disabled}
+    color={color}
+    data-testid="label"
+  >
     {children}
   </StyledLabel>
 );
