@@ -1,4 +1,4 @@
-# Lopez Laura UI Garden Build Checks
+# UI Garden Build Checks
 
 A production-ready React component library with automated quality checks, CI/CD pipeline, and Docker deployment.
 
