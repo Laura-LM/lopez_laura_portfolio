@@ -17,6 +17,10 @@ npm install
 npm run format
 docker build -t lopez_laura_coding_assignment13 .
 docker run -p 8018:8018 lopez_laura_coding_assignment13
+
+Note: The container will show nginx logs and appear to "hang" - this is normal! It's running successfully.
+Stop the container
+Press Ctrl+C in the terminal
 ```
 
 ### **Option 2: Skip Format (if format fails)**
@@ -31,6 +35,13 @@ docker run -p 8018:8018 lopez_laura_coding_assignment13
 **Visit: [http://localhost:8018](http://localhost:8018)**
 
 ---
+### **Development Scripts**
+```bash
+npm run storybook       # Run Storybook in development
+npm test               # Run tests in watch mode
+npm run test:ci        # Run tests with coverage (CI)
+```
+
 ## **Quality Checks**
 
 - **Pre-commit hooks**: ESLint, Prettier, Tests
