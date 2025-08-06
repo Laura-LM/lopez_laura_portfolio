@@ -31,3 +31,5 @@ RUN sed -i 's/80;/8018;/' /etc/nginx/conf.d/default.conf
 EXPOSE 8018
 
 CMD ["nginx", "-g", "daemon off;"]
+
+# comment 
