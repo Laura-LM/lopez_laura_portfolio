@@ -17,8 +17,6 @@ const StyledButton = styled.button<{ disabled?: boolean }>`
   }
 `;
 
-//test comment
-
 const Button: React.FC<ButtonProps> = ({ onClick, disabled, children }) => {
   return (
     <StyledButton onClick={onClick} disabled={disabled}>
