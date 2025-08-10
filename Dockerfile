@@ -1,6 +1,6 @@
 FROM node:20 AS build
 
-WORKDIR /lopez_laura_ui_garden_build_checks
+WORKDIR /lopez_laura_final_site
 
 # Copy package files
 COPY package*.json ./
@@ -20,16 +20,15 @@ RUN npm run build-storybook
 # Production stage
 FROM nginx:alpine
 
-WORKDIR /lopez_laura_ui_garden_build_checks
+WORKDIR /lopez_laura_final_site
 
 # Copy built storybook
-COPY --from=build /lopez_laura_ui_garden_build_checks/storybook-static /usr/share/nginx/html
+# Copy built storybook
+COPY --from=build /lopez_laura_final_site/storybook-static /usr/share/nginx/html
 
 # Configure nginx port
-RUN sed -i 's/80;/8018;/' /etc/nginx/conf.d/default.conf
+RUN sed -i 's/80;/5575;/' /etc/nginx/conf.d/default.conf
 
-EXPOSE 8018
+EXPOSE 5575
 
 CMD ["nginx", "-g", "daemon off;"]
-
-# comment uguig
