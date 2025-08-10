@@ -1,62 +1,49 @@
-# UI Garden Build Checks
+# Portfolio - Assignment 14: Component Library
 
-A production-ready React component library with automated quality checks, CI/CD pipeline, and Docker deployment.
+This project is a dockerized portfolio website that uses the component library developed during the course. The site showcases your coursework and is delivered as an optimized, tested, and production-ready application.
 
-## **Quick Start**
-
-### **Prerequisites**
+## Requirements
 - Docker installed
 - Node.js 20+
 - Git
 
-### **Option 1: Standard Setup**
-```bash
-git clone <REPO_URL>
-cd lopez_laura_ui_garden_build_checks
-npm install
-npm run format
-docker build -t lopez_laura_coding_assignment13 .
-docker run -p 8018:8018 lopez_laura_coding_assignment13
+## Usage Instructions
 
-Note: The container will show nginx logs and appear to "hang" - this is normal! It's running successfully.
-Stop the container
-Press Ctrl+C in the terminal
+1. Clone the repository:
+    ```bash
+    git clone <REPO_URL>
+    cd lopez_laura_portfolio
+    ```
+
+2. Install dependencies and format the code:
+    ```bash
+    npm install
+    npm run format
+    ```
+
+3. Build the Docker container:
+    ```bash
+    docker build -t lopez_laura_coding_assignment14 .
+    ```
+
+4. Run the container on port 5575:
+    ```bash
+    docker run -p 5575:5575 lopez_laura_coding_assignment14
+    ```
+
+    The site will be available at [http://localhost:5575](http://localhost:5575)
+
+## Container Details
+- **Name**: `lopez_laura_coding_assignment14` (required format: lastname_firstname_coding_assignment14)
+- **Working directory**: `/lopez_laura_final_site` inside the container
+- **Port**: `5575`
+- **Content**: Production build of the portfolio (Storybook)
+
+## Troubleshooting
+
+**If the port is busy:**
+```bash
+docker run -p 5576:5575 lopez_laura_coding_assignment14
 ```
 
-
-**Visit: [http://localhost:8018](http://localhost:8018)**
-
----
-### **Development Scripts**
-```bash
-npm run storybook       # Run Storybook in development
-npm test               # Run tests in watch mode
-npm run test:ci        # Run tests with coverage (CI)
-```
-
-## **Quality Checks**
-
-- **Pre-commit hooks**: ESLint, Prettier, Tests
-- **GitHub Actions**: Automated CI/CD pipeline
-- **Docker build**: Auto-formats and validates code
-
-## **Container Details**
-
-- **Name**: `lopez_laura_coding_assignment13`
-- **Port**: `8018`
-- **Content**: Production Storybook build
-
-## **Troubleshooting**
-
-
-**Docker build fails:**
-```bash
-docker system prune -a
-docker build --no-cache -t lopez_laura_coding_assignment13 .
-```
-
-**Port busy:**
-```bash
-docker run -p 8019:8018 lopez_laura_coding_assignment13
-```
 ---
