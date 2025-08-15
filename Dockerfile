@@ -1,3 +1,4 @@
+
 FROM node:20 AS build
 
 WORKDIR /lopez_laura_final_site
@@ -14,17 +15,16 @@ RUN npm run lint
 RUN npm run format:check
 RUN npm run test:ci
 
-# Build Storybook
-RUN npm run build-storybook
+# Build React app (not Storybook)
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
 
 WORKDIR /lopez_laura_final_site
 
-# Copy built storybook
-# Copy built storybook
-COPY --from=build /lopez_laura_final_site/storybook-static /usr/share/nginx/html
+# Copy built React app
+COPY --from=build /lopez_laura_final_site/build /usr/share/nginx/html
 
 # Configure nginx port
 RUN sed -i 's/80;/5575;/' /etc/nginx/conf.d/default.conf

@@ -32,12 +32,15 @@ This project is a dockerized portfolio website that uses the component library d
     ```
 
     The site will be available at [http://localhost:5575](http://localhost:5575)
+    
+## Important
+This portfolio site is a React application that reuses custom components from the UI library. The production build is served at port 5575 using Docker and Nginx. Storybook is only for development and testing components, not for the final portfolio site.
 
 ## Container Details
 - **Name**: `lopez_laura_coding_assignment14` (required format: lastname_firstname_coding_assignment14)
 - **Working directory**: `/lopez_laura_final_site` inside the container
 - **Port**: `5575`
-- **Content**: Production build of the portfolio (Storybook)
+- **Content**: Production build of the portfolio React app (not Storybook)
 
 ## Troubleshooting
 

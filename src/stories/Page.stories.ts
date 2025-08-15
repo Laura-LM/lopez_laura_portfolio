@@ -4,7 +4,7 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import { Page } from './Page';
 
-const meta = {
+const meta: Meta<typeof Page> = {
   title: 'Example/Page',
   component: Page,
   parameters: {
@@ -16,10 +16,21 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const LoggedOut: Story = {};
+export const LoggedOut: Story = {
+  args: {
+    onLogin: () => {},
+    onLogout: () => {},
+    onCreateAccount: () => {},
+  },
+};
 
 // More on component testing: https://storybook.js.org/docs/writing-tests/interaction-testing
 export const LoggedIn: Story = {
+  args: {
+    onLogin: () => {},
+    onLogout: () => {},
+    onCreateAccount: () => {},
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const loginButton = canvas.getByRole('button', { name: /Log in/i });
