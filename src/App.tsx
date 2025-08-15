@@ -17,10 +17,35 @@ export default function App() {
   const resources = [
     {
       title: 'Storybook Docs',
-      image: '/assets/docs.png',
+      image: '/assets/storybook-icon.jpg',
       summary: 'Documentation for component development and testing.',
+      link: 'https://storybook.js.org/',
     },
-    // Add more resources here
+    {
+      title: 'React Documentation',
+      image: '/assets/react-icon.jpg',
+      summary:
+        'Official React documentation and guides for building user interfaces.',
+      link: 'https://react.dev/',
+    },
+    {
+      title: 'TypeScript Handbook',
+      image: '/assets/typescript-icon.jpg',
+      summary: 'Comprehensive guide to TypeScript programming language.',
+      link: 'https://www.typescriptlang.org/docs/',
+    },
+    {
+      title: 'Docker Documentation',
+      image: '/assets/docker-icon.jpg',
+      summary: 'Complete guide for containerization and Docker deployment.',
+      link: 'https://docs.docker.com/',
+    },
+    {
+      title: 'GitHub Repository',
+      image: '/assets/github-icon.jpg',
+      summary: 'Source code and version control for this component library.',
+      link: 'https://github.com/Laura-LM/lopez_laura_portfolio',
+    },
   ];
 
   return (
@@ -28,18 +53,13 @@ export default function App() {
       {/* Header */}
       <header className="portfolio-header">
         <h1 className="portfolio-title">Laura Lopez</h1>
-        <p className="portfolio-subtitle">Web Designer & Digital Creator</p>
+        <p className="portfolio-subtitle">Full Stack Web Developer</p>
       </header>
 
       {/* Basic Information */}
       <section className="portfolio-section">
         <h2 className="section-title">Basic Information</h2>
         <div className="info-grid">
-          <div className="info-item">
-            <Text>
-              <strong>Name:</strong> Laura Lopez
-            </Text>
-          </div>
           <div className="info-item">
             <Text>
               <strong>Email:</strong> hi.lauralopez@gmail.com
@@ -118,25 +138,17 @@ export default function App() {
           {resources.map((res, idx) => (
             <div key={idx} className="resource-card">
               <Card>
-                <div
-                  style={{
-                    fontWeight: 'bold',
-                    fontSize: '1.2rem',
-                    marginBottom: '0.5rem',
-                  }}
-                >
+                <div className="resource-icon">
+                  <Img src={res.image} alt={res.title} />
+                </div>
+                <div className="resource-title">
                   <Text>{res.title}</Text>
                 </div>
-                <div style={{ margin: '1rem 0' }}>
+                <div className="resource-summary">
                   <Text>{res.summary}</Text>
                 </div>
-                <Img src={res.image} alt={res.title} />
                 <div style={{ marginTop: '1rem' }}>
-                  <Button
-                    onClick={() =>
-                      window.open('https://storybook.js.org/', '_blank')
-                    }
-                  >
+                  <Button onClick={() => window.open(res.link, '_blank')}>
                     Visit
                   </Button>
                 </div>
