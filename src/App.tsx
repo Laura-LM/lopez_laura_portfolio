@@ -52,6 +52,13 @@ export default function App() {
     <div className="portfolio-container">
       {/* Header */}
       <header className="portfolio-header">
+        <div className="profile-photo">
+          <Img
+            src="/assets/photo.jpg"
+            alt="Profile Picture"
+            className="profile-photo"
+          />{' '}
+        </div>
         <h1 className="portfolio-title">Laura Lopez</h1>
         <p className="portfolio-subtitle">Full Stack Web Developer</p>
       </header>
