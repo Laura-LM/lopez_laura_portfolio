@@ -1,52 +1,80 @@
-# Portfolio - Assignment 14: Component Library
+# 🌟 Laura Lopez - Portfolio Website
 
-This project is a dockerized portfolio website that uses the component library developed during the course. The site showcases your coursework and is delivered as an optimized, tested, and production-ready application.
+> **Assignment 14: Portfolio**  
+
+## Project Overview
+
+This portfolio is a React-based website that demonstrates the reuse of custom UI components developed throughout the course. The application is fully containerized, and featuring a modern design with a cream-colored theme and responsive layout.
+
+
+## Technology Stack
+
+- **Frontend**: React 18 + TypeScript
+- **Styling**: CSS3 + Styled Components
+- **Build Tool**: Vite
+- **Testing**: Jest + React Testing Library
+- **Code Quality**: ESLint + Prettier
+- **Containerization**: Docker + Nginx
+- **Components**: Custom UI Component Library
 
 ## Requirements
-- Docker installed
-- Node.js 20+
-- Git
 
-## Usage Instructions
+- **Docker**: Latest version
+- **Node.js**: Version 20+
+- **Git**: For version control
+- **Web Browser**: Modern browser supporting ES6+
 
-1. Clone the repository:
-    ```bash
-    git clone <REPO_URL>
-    cd lopez_laura_portfolio
-    ```
+## Quick Start
 
-2. Install dependencies and format the code:
-    ```bash
-    npm install
-    npm run format
-    ```
-
-3. Build the Docker container:
-    ```bash
-    docker build -t lopez_laura_coding_assignment14 .
-    ```
-
-4. Run the container on port 5575:
-    ```bash
-    docker run -p 5575:5575 lopez_laura_coding_assignment14
-    ```
-
-    The site will be available at [http://localhost:5575](http://localhost:5575)
-    
-## Important
-This portfolio site is a React application that reuses custom components from the UI library. The production build is served at port 5575 using Docker and Nginx. Storybook is only for development and testing components, not for the final portfolio site.
-
-## Container Details
-- **Name**: `lopez_laura_coding_assignment14` (required format: lastname_firstname_coding_assignment14)
-- **Working directory**: `/lopez_laura_final_site` inside the container
-- **Port**: `5575`
-- **Content**: Production build of the portfolio React app (not Storybook)
-
-## Troubleshooting
-
-**If the port is busy:**
+### Clone the Repository
 ```bash
-docker run -p 5576:5575 lopez_laura_coding_assignment14
+git clone https://github.com/Laura-LM/lopez_laura_portfolio.git
+cd lopez_laura_portfolio
 ```
 
----
+### Install Dependencies
+```bash
+npm install
+```
+
+### Format Code (Optional)
+```bash
+npm run format
+```
+
+### Build Docker Container
+```bash
+docker build -t lopez_laura_coding_assignment14 .
+```
+
+### Run the Portfolio
+```bash
+docker run -p 5575:5575 --name lopez_laura_coding_assignment14 lopez_laura_coding_assignment14
+```
+
+**Portfolio is now live at:** [http://localhost:5575](http://localhost:5575)
+
+## Development Commands
+### Local Development
+```bash
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Lint code
+npm run lint
+
+# Format code
+npm run format
+```
+
+### Container Name Conflict
+```bash
+# Remove existing container first
+docker rm lopez_laura_coding_assignment14
+```
