@@ -1,0 +1,137 @@
+/* Portfolio Styles */
+.portfolio-container {
+  background-color: #f5f5dc; /* Color crema */
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  color: #8b4513; /* Marrón complementario */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.portfolio-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.portfolio-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #8b4513;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.info-item {
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  border-left: 4px solid #8b4513;
+}
+
+.experience-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #8b4513;
+}
+
+.experience-title {
+  font-weight: bold;
+  color: #8b4513;
+  font-size: 1.1rem;
+}
+
+.experience-details {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-category {
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-top: 4px solid #8b4513;
+}
+
+.skill-category-title {
+  font-weight: bold;
+  color: #8b4513;
+  margin-bottom: 0.5rem;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.resource-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 1rem;
+  }
+
+  .portfolio-title {
+    font-size: 2rem;
+  }
+
+  .info-grid,
+  .skills-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
