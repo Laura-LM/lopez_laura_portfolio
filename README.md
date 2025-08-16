@@ -1,4 +1,4 @@
-# 🌟 Laura Lopez - Portfolio Website
+# Laura Lopez - Portfolio Website
 
 > **Assignment 14: Portfolio**  
 
