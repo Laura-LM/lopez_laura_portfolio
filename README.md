@@ -37,7 +37,7 @@ cd lopez_laura_portfolio
 npm install
 ```
 
-### Format Code (Optional)
+### Format Code
 ```bash
 npm run format
 ```
@@ -45,6 +45,11 @@ npm run format
 ### Build Docker Container
 ```bash
 docker build -t lopez_laura_coding_assignment14 .
+```
+### Container Name Conflict
+```bash
+# Remove existing container first
+docker rm lopez_laura_coding_assignment14
 ```
 
 ### Run the Portfolio
@@ -71,10 +76,4 @@ npm run lint
 
 # Format code
 npm run format
-```
-
-### Container Name Conflict
-```bash
-# Remove existing container first
-docker rm lopez_laura_coding_assignment14
 ```
